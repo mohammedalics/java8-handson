@@ -33,6 +33,6 @@ class MyFrame extends JFrame {
 //		});
 		
 		// java 8
-		btn.addActionListener((e) -> JOptionPane.showMessageDialog(null, "Hello!!"));
+		btn.addActionListener(e -> JOptionPane.showMessageDialog(null, "Hello!!"));
 	}
 }
