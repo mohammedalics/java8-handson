@@ -57,7 +57,7 @@ class Employee {
 
 }
 
-public class EmployeeSort {
+public class MethodReferences {
 	public static void main(String[] args) {
 
 		Employee e1 = new Employee(1, "Smith", "John");
