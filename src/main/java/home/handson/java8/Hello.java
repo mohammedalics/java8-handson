@@ -1,30 +1,50 @@
 package home.handson.java8;
 
-import java.time.LocalDate;
-import java.time.Month;
 
 /**
- * Hello world!
+ * Hello Lambda!
  *
  */
+
+/**
+ * 
+ * The interface HelloService
+ *
+ */
+
+interface HelloService {
+		String sayHello(String firstName, String lastName);
+}
+
+/**
+ * The Class HelloServiceImpl.
+ */
+//class HelloServiceImpl implements HelloService {
+//	@Override
+//	public String sayHello(String firstName, String lastName) {
+//		return "Hello " + firstName + " " + lastName + "!";
+//
+//	}
+//}
+
+/**
+ * The Class Hello.
+ */
 public class Hello {
-	String firstname;
-	String lastname;
-
-	public Hello() {
-	}
-
-	public Hello(String firstname, String lastname) {
-		this.firstname = firstname;
-		this.lastname = lastname;
-	}
-
-	public void hello() {
-		System.out.println("Hello " + firstname + " " + lastname);
-	}
-
+	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
-		Hello hello = new Hello(args[0], args[1]);
-		hello.hello();
+
+		HelloService helloService = (firstName, lastName) -> {
+			return "Hello " + firstName + " " + lastName + "!";
+		};
+		
+//		HelloService helloService = new HelloServiceImpl();
+		System.out.println(helloService.sayHello(args[0], args[1]));
+
 	}
 }
