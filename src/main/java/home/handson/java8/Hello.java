@@ -39,10 +39,13 @@ public class Hello {
 	 */
 	public static void main(String[] args) {
 
+		// java8
+		// Parameter type String for firstName and lastName is optional. 
 		HelloService helloService = (firstName, lastName) -> {
 			return "Hello " + firstName + " " + lastName + "!";
 		};
-		
+
+		// Java7
 //		HelloService helloService = new HelloServiceImpl();
 		System.out.println(helloService.sayHello(args[0], args[1]));
 
