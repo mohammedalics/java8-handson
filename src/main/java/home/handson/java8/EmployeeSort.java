@@ -51,11 +51,10 @@ class Employee {
 		return x.getLastName().compareTo(y.getLastName());
 	}
 
-	/**
-	 * 
-	 * public static int compareByLastName(Employee x, Employee y) { return
-	 * x.getLastName().compareTo(y.getLastName()); }
-	 */
+	public static int compareByLastNameStatic(Employee x, Employee y) {
+		return x.getLastName().compareTo(y.getLastName());
+	}
+
 }
 
 public class EmployeeSort {
@@ -68,21 +67,41 @@ public class EmployeeSort {
 		list.add(e2);
 
 		// Java 7
-//		Collections.sort(list, new Comparator<Employee>() {
-//			public int compare(Employee x, Employee y) {
-//				return x.getLastName().compareTo(y.getLastName());
-//			}
-//		});
-		
-		
-		// Java 8
-		Collections.sort(list, (x, y) -> x.getLastName().compareTo(y.getLastName()));
+		// Collections.sort(list, new Comparator<Employee>() {
+		// public int compare(Employee x, Employee y) {
+		// return x.getLastName().compareTo(y.getLastName());
+		// }
+		// });
+
+		// Java 8 (1)
+		 Collections.sort(list, (x, y) ->
+		 x.getLastName().compareTo(y.getLastName()));
+		// Java 8 (2)
+//		Employee e = new Employee();
+//		Collections.sort(list, e::compareByLastName);
+		// Java 8 (3)
+//		Collections.sort(list, Employee::compareByLastNameStatic);
+
 		ListIterator<Employee> litr = list.listIterator();
 
 		while (litr.hasNext()) {
 			Employee element = litr.next();
 			System.out.print(element.getLastName() + " ");
 		}
+
+		// Java 8 (4)
+//		String s1 = new String("B");
+//		String s2 = new String("A");
+//		List<String> l = new ArrayList<String>();
+//		l.add(s1);
+//		l.add(s2);
+//		Collections.sort(l, String::compareTo);
+//		ListIterator<String> litr2 = l.listIterator();
+//
+//		while (litr2.hasNext()) {
+//			String element = litr2.next();
+//			System.out.print(element);
+//		}
 
 	}
 }
