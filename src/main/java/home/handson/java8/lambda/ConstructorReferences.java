@@ -1,4 +1,4 @@
-package home.handson.java8;
+package home.handson.java8.lambda;
 
 import java.util.ArrayList;
 import java.util.List;
