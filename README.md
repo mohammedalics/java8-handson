@@ -33,6 +33,7 @@ Java 8 hands on
 	 - A ternary conditional expression
 	 - A cast expression
  - A lambda expression body must not throw more exceptions than specified in the throws clause of the functional interface method. If a lambda expression body throws an exception, the throws clause of the functional interface method must declare the same exception type or its supertype.
+ - To be continued .............. you can check below code examples in order and try to understand the idea behnid each example. 
 
 **Examples in order**
 
