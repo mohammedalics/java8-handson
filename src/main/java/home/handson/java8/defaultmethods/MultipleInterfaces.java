@@ -7,7 +7,7 @@ package home.handson.java8.defaultmethods;
 }
  
  interface B1 {
-    default void foo1(){
+    default void foo(){
        System.out.println("Calling B.foo()");
     }
 }
@@ -20,4 +20,8 @@ package home.handson.java8.defaultmethods;
   *
   */
 class Clazz1 implements A1, B1 {
+	public void foo() {
+		A1.super.foo();
+	}
+	
 }
