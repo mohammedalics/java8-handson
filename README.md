@@ -54,6 +54,7 @@ Java 8 hands on
  17. MethodReference
  18. ConstructorReference
  19. VirtualExtensionMethods
+ 20. PrintList
 
 
 ----------
