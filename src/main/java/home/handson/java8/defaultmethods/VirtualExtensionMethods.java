@@ -1,4 +1,4 @@
-package home.handson.java8.lambda;
+package home.handson.java8.defaultmethods;
 
 interface InterfaceA {
 	public void method1 (); 
